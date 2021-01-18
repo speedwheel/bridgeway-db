@@ -363,15 +363,18 @@ var DtModule = (function () {
         
       });
 
-      $('div.toolbar').after('<select class="enroll-year"></select>');
-      $('.enroll-year').append($('<option>', { value : '' }).text('All years'));
-      years.sort().reverse();
-      for (var key in years) {
-        $('.enroll-year').append($('<option>', { value : years[key] }).text(years[key]));
+      if ($('#advisors-table_wrapper .enroll-year').length <= 0) {
+        $('#advisors-table_wrapper div.toolbar').after('<select class="enroll-year"></select>');
+        $('#advisors-table_wrapper .enroll-year').append($('<option>', { value : '' }).text('All years'));
+        years.sort().reverse();
+        for (var key in years) {
+          $('#advisors-table_wrapper .enroll-year').append($('<option>', { value : years[key] }).text(years[key]));
+        }
+        $('#advisors-table_wrapper .enroll-year').val(currYear);
+        
+        table.column( 1 ).search( currYear ? '^'+currYear+'$' : '', true, false ).draw();
       }
-      $('.enroll-year').val(currYear);
-      
-      table.column( 1 ).search( currYear ? '^'+currYear+'$' : '', true, false ).draw();
+     
     }
   }
 
@@ -395,6 +398,12 @@ var DtModule = (function () {
       var val = $(this).val();
       table.column( 1 ).search( val ? '^'+val+'$' : '', true, false ).draw();
     })
+
+    $("input").keyup(function(e) {
+      if (e.keyCode == 27) { //Escape button
+         $.fancybox.close();
+       }
+    });
 
     table.on('click', 'tbody tr', function(e) {
       e.preventDefault();
