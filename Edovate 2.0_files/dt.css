@@ -71,3 +71,7 @@ overflow: hidden !important;
 .w-100 {
     width: 100%;
 }
+ .fancybox-content {
+    vertical-align: top;
+    margin: 20px;
+}
