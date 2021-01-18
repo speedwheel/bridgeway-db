@@ -1,0 +1,217 @@
+
+.text {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+}
+
+.settingsHeader   {
+	BACKGROUND-COLOR: #85919D;
+	height:36px;
+}
+
+.reportHeader   {
+	BACKGROUND-COLOR: #942724;
+	height:36px;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px;
+}
+
+.reportHeaderTable   {
+	BACKGROUND-COLOR: #942724;
+	height:36px;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	padding:8px;
+}
+
+.reportLink{
+	border:0px solid #D6D6D6;
+	padding:3px 30px 3px 3px;
+	margin-left:15px;
+	margin-right:5px;
+	margin-top:0px;
+	background-image:url(images/reportArrow.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#c9cad1;
+	cursor:pointer;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+.reportLinks{
+	position:absolute;
+	margin-top:10px;
+	margin-right:3px;
+	border:1px solid #D6D6D6;
+	background-color:white;
+	/*padding:7px;*/
+	z-index:99;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	/*display:none;*/
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.reportLinksArrow{
+	position:absolute; 
+	left:25px; 
+	top:-11px;
+}
+
+
+
+.reportLinkLink a{
+	text-decoration:none;
+	display: block;
+	padding:7px 0px 7px 0px;
+	width:100%;
+	color:#666;
+	
+}
+.reportLinkLink a:HOVER {background-color:#efdfdf;}
+
+
+.reportLinkLinkOn a{
+	display: block;
+	padding:7px 0px 7px 0px;
+	width:100%;
+	color:#666;
+	background-color:#efdfdf;
+}
+
+.blackBorder{
+	border:1px solid black;
+}
+
+.redNumber{
+	color:942724;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:22px;
+	font-weight:bold;
+}
+
+
+.selectLink{
+	border:0px solid #D6D6D6;
+	padding:3px 30px 3px 3px;
+	margin-left:15px;
+	margin-right:5px;
+	margin-top:0px;
+	background-image:url(images/reportArrow.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	color:white;
+	cursor:pointer;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+}
+
+
+
+.selectLinks{
+	position:absolute;
+	margin-top:10px;
+	margin-right:3px;
+	border:1px solid #D6D6D6;
+	background-color:white;
+	/*padding:7px;*/
+	z-index:99;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	/*display:none;*/
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.selectLinksArrow{
+	position:absolute; 
+	left:25px; 
+	top:-11px;
+}
+
+
+
+.selectLinkLink a{
+	text-decoration:none;
+	display: block;
+	padding:7px 0px 7px 0px;
+	width:100%;
+	color:#942724;
+	font-weight:bold;
+	background-color:white;
+	
+}
+.selectLinkLink a:HOVER {background-color:#efdfdf;}
+
+.selectLinkLinkOn a{
+	text-decoration:none;
+	display: block;
+	padding:7px 0px 7px 0px;
+	width:100%;
+	color:#942724;
+	font-weight:bold;
+	background-color:#efdfdf;
+}
+
+
+.MenuFirstCol{
+	float:left;
+	padding:8px;	
+}
+
+
+.greyArea{
+	background-color:#dadde2;
+}
+.greyRow{
+	background-color:#e1e1e1;
+}
+.lightgreyRow{
+	background-color:#f5f5f5;
+}
+.whiteRow{
+	background-color:#FFFFFF;
+}
+.redRow{
+	background-color:#efdfdf;
+}
+.totalsRow{
+	background-color:#333333;
+	color:white;
+	font-weight:bold;
+}
+
+.padding8{
+	padding:8px;	
+}
+
+.whiteSeperator{
+	background-color:#fff;
+	width:12px;
+}
+.Seperator{
+	width:12px;
+}
+.verticalSeperator{
+	height:12px;
+}
+
+
+
+
+

@@ -1,0 +1,618 @@
+
+/*website section*/
+.web_text    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #000000; FONT-WEIGHT: NORMAL;BACKGROUND-COLOR: #F7EADA;}
+.web_title    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 14PX; COLOR: #F7EADA; FONT-WEIGHT: BOLD;BACKGROUND-COLOR: #B96F1E;}
+.web_subtitle    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #F7EADA; FONT-WEIGHT: BOLD;BACKGROUND-COLOR: #B96F1E;padding:5px 0px 5px 15px;}
+.web_info    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #000000; FONT-WEIGHT: BOLD; BACKGROUND-COLOR: #F7EADA;padding:5px 0px 5px 15px;}
+.web_settings    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+.web_buttonarea    {background-color:#D2D6D9; border-top: 3px solid #B96F1E;padding:15px;text-align: right}
+.web_inputs    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #000000; FONT-WEIGHT: NORMAL;}
+.web_pageboarder    {background-color:#FFFFFF; border-top: 3px solid #B96F1E;border-bottom: 3px solid #B96F1E;border-left: 3px solid #B96F1E;border-right: 3px solid #B96F1E;}
+/*end website section*/
+
+/*crm section*/
+.crm_text    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #000000; FONT-WEIGHT: NORMAL;BACKGROUND-COLOR: #F9F9F9;}
+.crm_title    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 14PX; COLOR: #000000; BACKGROUND-COLOR: #efdfdf;}
+.crm_subtitle    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #000000; BACKGROUND-COLOR: #efdfdf;padding:5px 0px 5px 15px;}
+.crm_info    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #000000;  BACKGROUND-COLOR: #F9F9F9;padding:5px 0px 5px 15px;}
+.crm_settings    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+.crm_buttonarea    {background-color:#ffffff; border-top: 3px solid #efdfdf;padding:15px;text-align: right}
+.crm_inputs    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #000000; FONT-WEIGHT: NORMAL;}
+.crm_pageboarder    {background-color:#FFFFFF; border-top: 3px solid #efdfdf;border-bottom: 3px solid #efdfdf;border-left: 3px solid #efdfdf;border-right: 3px solid #efdfdf;}
+/*end crm section*/
+
+body {
+	font-size: 11PX; 
+	font-family: VERDANA, ARIAL; 
+	BACKGROUND-ATTACHMENT: FIXED; 
+	FONT-WEIGHT: NORMAL; 
+	COLOR: #000;
+	margin: 0px 0px 0px 0px;
+}
+
+body.white {
+	font-size: 11PX; 
+	font-family: VERDANA, ARIAL; 
+	background-color: #FFF; 
+	BACKGROUND-ATTACHMENT: FIXED; 
+	FONT-WEIGHT: NORMAL; 
+	COLOR: #000;
+}
+
+body.gray {
+	font-size: 11PX; 
+	font-family: VERDANA, ARIAL; 
+	background-color: #DEDEDE; 
+	BACKGROUND-ATTACHMENT: FIXED; 
+	FONT-WEIGHT: NORMAL; 
+	COLOR: #000;
+}
+
+/* BACKGROUND-COLOR: #003366 */
+/*On Mouse Over link*/
+
+A		  {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: underline}
+A:HOVER   {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000;  TEXT-DECORATION: underline}
+A:LINK    {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: underline}
+A:ACTIVE  {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: underline}
+A:VISITED {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: underline}
+
+/*A		 {FONT-SIZE: 8pt; FONT-FAMILY: tahoma,verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #474747; TEXT-DECORATION: underline}background-color : #DDEEFF;
+A:HOVER   {FONT-SIZE: 8pt; FONT-FAMILY: tahoma,verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #474747; TEXT-DECORATION: underline}
+A:LINK    {FONT-SIZE: 8pt; FONT-FAMILY: tahoma,verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #474747; TEXT-DECORATION: underline}
+A:ACTIVE  {FONT-SIZE: 8pt; FONT-FAMILY: tahoma,verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #474747; TEXT-DECORATION: underline}
+A:VISITED {FONT-SIZE: 8pt; FONT-FAMILY: tahoma,verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #474747; TEXT-DECORATION: underline}*/
+
+.bodytext1 A		 {FONT-SIZE: 12PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #FFFFFF; TEXT-DECORATION: none}
+.bodytext1 A:HOVER   {FONT-SIZE: 12PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.bodytext1 A:LINK    {FONT-SIZE: 12PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #FFFFFF; TEXT-DECORATION: none}
+.bodytext1 A:ACTIVE  {FONT-SIZE: 12PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #FFFFFF; TEXT-DECORATION: none}
+.bodytext1 A:VISITED {FONT-SIZE: 12PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #FFFFFF; TEXT-DECORATION:none}
+
+.bodytext2 A		 {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #333333; TEXT-DECORATION: none}
+.bodytext2 A:HOVER   {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext2 A:LINK    {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #333333; TEXT-DECORATION: none}
+.bodytext2 A:ACTIVE  {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #333333; TEXT-DECORATION: none}
+.bodytext2 A:VISITED {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #333333; TEXT-DECORATION:none}
+
+.bodytext3 A		 {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext3 A:HOVER   {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext3 A:LINK    {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext3 A:ACTIVE  {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext3 A:VISITED {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION:underline}
+
+.bodytext3u A		 {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: none}
+.bodytext3u A:HOVER   {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext3u A:LINK    {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: none}
+.bodytext3u A:ACTIVE  {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: none}
+.bodytext3u A:VISITED {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION:none}
+
+.bodytext5 A		 {FONT-SIZE: 10PX; FONT-FAMILY: verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.bodytext5 A:HOVER   {FONT-SIZE: 10PX; FONT-FAMILY: verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.bodytext5 A:LINK    {FONT-SIZE: 10PX; FONT-FAMILY: verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.bodytext5 A:ACTIVE  {FONT-SIZE: 10PX; FONT-FAMILY: verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.bodytext5 A:VISITED {FONT-SIZE: 10PX; FONT-FAMILY: verdana,ARIAL,helvetica; FONT-WEIGHT: normal; COLOR: #FFFFFF; TEXT-DECORATION: underline}
+
+.bodytext6 A		 {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: UNDERLINE}
+.bodytext6 A:HOVER   {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: UNDERLINE}
+.bodytext6 A:LINK    {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: UNDERLINE}
+.bodytext6 A:ACTIVE  {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: UNDERLINE}
+.bodytext6 A:VISITED {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #000000; TEXT-DECORATION: UNDERLINE}
+
+.bodytext7 A		 {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext7 A:HOVER   {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext7 A:LINK    {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext7 A:ACTIVE  {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.bodytext7 A:VISITED {FONT-SIZE: 11PX; FONT-FAMILY: VERDANA, TAHOMA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION:underline}
+
+
+.editlink A		 {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.editlink A:HOVER   {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.editlink A:LINK    {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.editlink A:ACTIVE  {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION: underline}
+.editlink A:VISITED {FONT-SIZE: 10PX; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: NORMAL; COLOR: #333333; TEXT-DECORATION:underline}
+
+.menu		 {FONT-SIZE: 10PX; FONT-FAMILY: TAHOMA, VERDANA, ARIAL; COLOR: #000000; TEXT-DECORATION: none}
+.menu_on	 {FONT-SIZE: 10PX; FONT-FAMILY: TAHOMA, VERDANA, ARIAL; FONT-WEIGHT: BOLD; COLOR: #000000; TEXT-DECORATION: UNDERLINE}
+
+.faqpopuptext{font-family: verdana,tahoma,arial,helvetica;font-size:8pt;color:#333333;line-height: 175%; FONT-WEIGHT: normal}
+
+
+.whiteBG        {BACKGROUND-COLOR: #FFFFFF}
+/*.blackBG        {BACKGROUND-COLOR: #000000}*/
+.blackBG        {BACKGROUND-COLOR: #FFFFFF}
+.lightblueBG    {BACKGROUND-COLOR: #00639C}
+.lightblueBG1   {BACKGROUND-COLOR: #336699}
+.lightblueBG2   {BACKGROUND-COLOR: #688BAB}
+.lightgrayBG    {BACKGROUND-COLOR: #CDCDCD}
+.lightgrayBG1   {BACKGROUND-COLOR: #CCCCCC}
+.lightgrayBG2   {BACKGROUND-COLOR: #EAEAEA}
+.lightgrayBG3   {BACKGROUND-COLOR: #DEDEDE}
+.charcoalBG   {BACKGROUND-COLOR: #697582}
+
+.titleBar   {BACKGROUND-COLOR: #4974A1}
+
+.darkgrayBG1    {BACKGROUND-COLOR: #B4B3B3}
+.darkgrayBG2    {BACKGROUND-COLOR: #E5E5E5}
+.darkgrayBG3    {BACKGROUND-COLOR: #999999}
+.darkBlueBG     {BACKGROUND-COLOR: #003366}
+.darkBlueBG1    {BACKGROUND-COLOR: #737F8C}
+
+.darkorangeBG   {BACKGROUND-COLOR: #D1993F}
+.lightorangeBG   {BACKGROUND-COLOR: #F7C967}
+
+.DBlightgrayBG    {BACKGROUND-COLOR: #EFEFEF}
+.DBdarkgrayBG    {BACKGROUND-COLOR: #D2D2D2}
+
+/* Left Navi Fonts */
+.sbLeftNavi   {FONT-FAMILY: TAHOMA, ARIAL; FONT-SIZE: 10PX; COLOR: #FFFFFF; FONT-WEIGHT: BOLD;}
+
+/* Light Gray */
+.slGray    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #E7E7E7; FONT-WEIGHT: NORMAL;}
+.slGray    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #E7E7E7; FONT-WEIGHT: BOLD;}
+/* End Light Gray*/
+
+/* Gray */
+.sGray    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #666666; FONT-WEIGHT: NORMAL;}
+.sbGray   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #666666; FONT-WEIGHT: BOLD;}
+.mGray    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #666666; FONT-WEIGHT: NORMAL;line-height: 175%;}
+.mbGray   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #666666; FONT-WEIGHT: BOLD;line-height: 175%;}
+/* End Gray*/
+
+/* welcome Page */
+.mainwelcomepage   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #000000; FONT-WEIGHT: NORMAL;line-height: 175%;}
+/* End welcome Page*/
+
+/* Large Gray */
+.lGray    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #6f7d8a; FONT-WEIGHT: NORMAL;}
+.lbGray   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #6f7d8a; FONT-WEIGHT: BOLD;}
+/* End Large Gray*/
+
+/* Scarlet */
+.sScarlet    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #990000; FONT-WEIGHT: NORMAL;}
+.sbScarlet   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #990000; FONT-WEIGHT: BOLD;}
+/* End Scarlet*/
+
+/* LightBlue */
+.sBlue    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #336699; FONT-WEIGHT: NORMAL;}
+.sbBlue    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #336699; FONT-WEIGHT: BOLD;}
+.sLBlue    {FONT-FAMILY: ARIAL; FONT-SIZE: 11PX; COLOR: #336699; FONT-WEIGHT: NORMAL;}
+.sbLBlue   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #336699; FONT-WEIGHT: BOLD;}
+.mLBlue    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 13PX; COLOR: #336699; FONT-WEIGHT: NORMAL;}
+.mbLBlue   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 13PX; COLOR: #336699; FONT-WEIGHT: BOLD;}
+.lbBlue   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #336699; FONT-WEIGHT: BOLD;}
+/* End LightBlue*/
+
+/* Black */		
+.xxsBlack   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 8PX; COLOR: #000000; FONT-WEIGHT: NORMAL;} 				 
+.xsBlack   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 9PX; COLOR: #000000; FONT-WEIGHT: NORMAL;} 
+.xsbBlack   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 9PX; COLOR: #000000; FONT-WEIGHT: BOLD;} 
+.sBlack    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #000000; FONT-WEIGHT: NORMAL;}
+.sbBlack   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+.sbBlack2   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+.mBlack    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #000000; FONT-WEIGHT: NORMAL;}
+.mbBlack   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 13PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+.lBlack    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #000000; FONT-WEIGHT: NORMAL;}
+.lbBlack   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+.xlbBlack  {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 18PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+/* End Black*/
+
+/* White */					
+.xsWhite   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 9PX; COLOR: #FFFFFF; FONT-WEIGHT: NORMAL;}	  
+.xsbWhite  {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 9PX; COLOR: #FFFFFF; FONT-WEIGHT: BOLD;}
+.sWhite    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #FFFFFF; FONT-WEIGHT: NORMAL;}
+.sbWhite   {FONT-FAMILY: TAHOMA, VERDANA, ARIAL; FONT-SIZE: 11PX; COLOR: #FFFFFF; FONT-WEIGHT: BOLD;}
+.mWhite    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 13PX; COLOR: #FFFFFF; FONT-WEIGHT: NORMAL;}
+.mbWhite   {FONT-FAMILY: TAHOMA, ARIAL; FONT-SIZE: 13PX; COLOR: #FFFFFF; FONT-WEIGHT: BOLD;}
+.lWhite    {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #FFFFFF; FONT-WEIGHT: NORMAL;}
+.lbWhite   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #FFFFFF; FONT-WEIGHT: BOLD;}
+.xlbWhite  {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 18PX; COLOR: #FFFFFF; FONT-WEIGHT: BOLD;}
+/* End White*/
+
+/* Red */
+.sRed      {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #FF0000; FONT-WEIGHT: NORMAL;}
+.sbRed     {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #FF0000; FONT-WEIGHT: BOLD;}
+/* End Red*/
+
+.sbBlackmb   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #626262; FONT-WEIGHT: BOLD;}
+.sborangemb  {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; COLOR: #CC9933; FONT-WEIGHT: BOLD;}
+
+/* Submit Button */
+.frmBtnLogin {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; FONT-WEIGHT: BOLD; COLOR: #FFFFFF; BACKGROUND-COLOR: #CC3300}                
+.frmBtnCommon {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; FONT-WEIGHT: BOLD; COLOR: #000000; BACKGROUND-COLOR: #e1e1e1}                
+
+/*Superscript  & Subscript*/
+.superscript {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 8PT; FONT-WEIGHT: BOLD; COLOR:#FF4500; VERTICAL-ALIGN: SUPER; FONT-STYLE: ITALIC}
+.subscript   {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 8PT; FONT-WEIGHT: BOLD; COLOR:#BC8F8F; VERTICAL-ALIGN: SUB; FONT-STYLE: ITALIC}
+.justify     {TEXT-ALIGN: JUSTIFY }
+
+	/*.button {FONT-FAMILY: VERDANA, ARIAL; FONT-SIZE: 10PX; FONT-WEIGHT: NORMAL; BORDER: B4B3B3 solid 1; COLOR: #000000; BACKGROUND-COLOR: #ffffff; height:20px;} */     
+	/*.blackBG	{background-color: 000000}*/
+	.whiteBG	{background-color: ffffff}
+	.orangeBG1	{background-color: FFBC50}
+	.orangeBG2	{background-color: FF9D00}	
+	.darkBrown	{background-color: D88705}		
+	.yellowBG1  {background-color: FFD900}
+	
+/* -------------------- STYLE FOR FRONT END -------------------- */	
+.listlink A		    {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+.listlink A:HOVER   {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+.listlink A:LINK    {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+.listlink A:ACTIVE  {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #184C80; TEXT-DECORATION: underline}
+.listlink A:VISITED {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+   
+
+.listlinkbold A		    {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.listlinkbold A:HOVER   {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.listlinkbold A:LINK    {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.listlinkbold A:ACTIVE  {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.listlinkbold A:VISITED {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+
+.Lmenulinkbold A		 {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.Lmenulinkbold A:HOVER   {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.Lmenulinkbold A:LINK    {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.Lmenulinkbold A:ACTIVE  {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+.Lmenulinkbold A:VISITED {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline}
+
+.menulink A		    {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+.menulink A:HOVER   {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+.menulink A:LINK    {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+.menulink A:ACTIVE  {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+.menulink A:VISITED {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline}
+
+.smalllink A		 {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #995E00; TEXT-DECORATION: underline}
+.smalllink A:HOVER   {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #995E00; TEXT-DECORATION: underline}
+.smalllink A:LINK    {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #995E00; TEXT-DECORATION: underline}
+.smalllink A:ACTIVE  {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #995E00; TEXT-DECORATION: underline}
+.smalllink A:VISITED {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #995E00; TEXT-DECORATION: underline}
+   
+.smalllinkRed A		 	{FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.smalllinkRed A:HOVER   {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.smalllinkRed A:LINK    {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.smalllinkRed A:ACTIVE  {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.smalllinkRed A:VISITED {FONT-SIZE: 7pt; FONT-FAMILY: tahoma, VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+
+.resultlink A		 {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.resultlink A:HOVER   {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.resultlink A:LINK    {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.resultlink A:ACTIVE  {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+.resultlink A:VISITED {FONT-SIZE: 9pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #CF0909; TEXT-DECORATION: underline}
+
+.linkwhite A		    {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline}
+.linkwhite A:HOVER   {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline}
+.linkwhite A:LINK    {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline}
+.linkwhite A:ACTIVE  {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline}
+.linkwhite A:VISITED {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline}
+
+.linkwhiteBold A		    {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none}
+.linkwhiteBold A:HOVER   {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none}
+.linkwhiteBold A:LINK    {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none}
+.linkwhiteBold A:ACTIVE  {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none}
+.linkwhiteBold A:VISITED {FONT-SIZE: 8pt; FONT-FAMILY: VERDANA, ARIAL; FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none}
+
+
+.textBlack{font-family: VERDANA, ARIAL;font-size:8pt;color:#000000; FONT-WEIGHT: normal}
+.textBlackBold{font-family: VERDANA, ARIAL;font-size:8pt;color:#000000; FONT-WEIGHT: bold}
+.listingHeader	{FONT-FAMILY: VERDANA, ARIAL;FONT-SIZE:9pt;COLOR:#CF0909; FONT-WEIGHT: bold;}
+.listingHeader2	{FONT-FAMILY: VERDANA, ARIAL;FONT-SIZE:9pt;COLOR:#CF0909; FONT-WEIGHT: normal;}
+/* END -------------------- STYLE FOR FRONT END -------------------- */	
+
+
+.c1 { background-color: #C0C0C0; }
+.c2 { background-color: #D7D7D7; }
+
+.o1 { background-color: #C0C0C0; }
+.o2 { background-color: #CBCBCB; }
+
+/* START -------------------- STYLE FOR BUSINESS COMMUNITY -------------------- */
+
+/*
+.bcTitle   {FONT-FAMILY: TREBUCHET MS, VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+.bcDesc   {FONT-FAMILY: TREBUCHET MS, VERDANA, ARIAL; FONT-SIZE: 12PX; COLOR: #000000; FONT-WEIGHT: NORMAL;}
+.bcTitleLg {FONT-FAMILY: TREBUCHET MS, VERDANA, ARIAL; FONT-SIZE: 15PX; COLOR: #000000; FONT-WEIGHT: BOLD;}
+*/
+.bcTitleLg{font-family: arial,tahoma,arial,helvetica;font-size:11pt;color:#333333;line-height: 100%; FONT-WEIGHT: BOLD}
+.bcTitle{font-family: verdana,tahoma,arial,helvetica;font-size:8pt;color:#333333;line-height: 175%; FONT-WEIGHT: BOLD}
+.bcSubTitle{font-family: verdana,tahoma,arial,helvetica;font-size:8pt;color:#333333;line-height: 100%; FONT-WEIGHT: NORMAL}
+.bcDesc{font-family: verdana,tahoma,arial,helvetica;font-size:8pt;color:#333333; FONT-WEIGHT: NORMAL}
+.bcdSideBoxDesc{font-family: verdana,tahoma,arial,helvetica;font-size:7.5pt;color:#333333;line-height: 175%; FONT-WEIGHT: BOLD}
+.bcdkgrey{font-family: verdana,tahoma,arial,helvetica;font-size:8pt;color:#666666; FONT-WEIGHT: NORMAL}
+
+.input{font-color: 333333; font-family: verdana,arial,helvetica; font-weight: normal; font-size: 11px; background-color: FFFADB;}
+.combo{font-family: verdana,arial; font-size: 10px; background-color: FFFADB;}
+
+.bcLink A		    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcLink A:HOVER  	{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcLink A:LINK    	{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcLink A:ACTIVE  	{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcLink A:VISITED 	{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+
+.bcsmLink A		    {FONT-SIZE: 8pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcsmLink A:HOVER  	{FONT-SIZE: 8pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcsmLink A:LINK    {FONT-SIZE: 8pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcsmLink A:ACTIVE  	{FONT-SIZE: 8pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+.bcsmLink A:VISITED {FONT-SIZE: 8pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #004786; TEXT-DECORATION: underline}
+
+
+.date{font-family: VERDANA, ARIAL;font-size:8pt;color:#697583; FONT-WEIGHT: bold}
+
+.navWhiteText	    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none}
+
+.navWhite A		    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none}
+.navWhite A:HOVER  	{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.navWhite A:LINK    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none}
+.navWhite A:ACTIVE  	{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none}
+.navWhite A:VISITED {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION:none}
+
+.navShortcuttext	    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #5B6773; TEXT-DECORATION: none}
+
+.navShortcut A		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #5B6773; TEXT-DECORATION: none}
+.navShortcut A:HOVER  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #5B6773; TEXT-DECORATION: underline}
+.navShortcut A:LINK    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #5B6773; TEXT-DECORATION: none}
+.navShortcut A:ACTIVE  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #5B6773; TEXT-DECORATION: none}
+.navShortcut A:VISITED {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #5B6773; TEXT-DECORATION:none}
+
+.navNetText		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #015902; TEXT-DECORATION: none}
+
+.navNet A		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #015902; TEXT-DECORATION: none}
+.navNet A:HOVER  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #015902; TEXT-DECORATION: underline}
+.navNet A:LINK    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #015902; TEXT-DECORATION: none}
+.navNet A:ACTIVE  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #015902; TEXT-DECORATION: none}
+.navNet A:VISITED {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #015902; TEXT-DECORATION:none}
+
+.navdocText		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #02339A; TEXT-DECORATION: none}
+
+.navdoc A		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #02339A; TEXT-DECORATION: none}
+.navdoc A:HOVER  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #02339A; TEXT-DECORATION: underline}
+.navdoc A:LINK    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #02339A; TEXT-DECORATION: none}
+.navdoc A:ACTIVE  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #02339A; TEXT-DECORATION: none}
+.navdoc A:VISITED {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #02339A; TEXT-DECORATION:none}
+
+.navcrmText		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #942724; TEXT-DECORATION: none}
+
+.navcrm A		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #942724; TEXT-DECORATION: none}
+.navcrm A:HOVER  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #942724; TEXT-DECORATION: underline}
+.navcrm A:LINK    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #942724; TEXT-DECORATION: none}
+.navcrm A:ACTIVE  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #942724; TEXT-DECORATION: none}
+.navcrm A:VISITED {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #942724; TEXT-DECORATION:none}
+
+.navwebText		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #CD7B18; TEXT-DECORATION: none}
+
+.navweb A		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #CD7B18; TEXT-DECORATION: none}
+.navweb A:HOVER  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #CD7B18; TEXT-DECORATION: underline}
+.navweb A:LINK    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #CD7B18; TEXT-DECORATION: none}
+.navweb A:ACTIVE  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #CD7B18; TEXT-DECORATION: none}
+.navweb A:VISITED {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #CD7B18; TEXT-DECORATION:none}
+
+.username		   {FONT-SIZE: 10pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #507FAB; TEXT-DECORATION: none}
+
+
+.buttons A		    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; border-style:solid; border-width:1px; padding:  4px; background-color : #FFFFFF; FONT-WEIGHT: normal; COLOR: #333333; TEXT-DECORATION: none}
+.buttons A:HOVER  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; border-style:solid; border-width:1px; padding:  4px; background-color : #FFFFFF; FONT-WEIGHT: normal; COLOR: #333333; TEXT-DECORATION: underline}
+.buttons A:LINK    {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; border-style:solid; border-width:1px; padding:  4px; background-color : #FFFFFF; FONT-WEIGHT: normal; COLOR: #333333; TEXT-DECORATION: none}
+.buttons A:ACTIVE  	{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; border-style:solid; border-width:1px; padding:  4px; background-color : #FFFFFF; FONT-WEIGHT: normal; COLOR: #333333; TEXT-DECORATION: none}
+.buttons A:VISITED {FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; border-style:solid; border-width:1px; padding:  4px; background-color : #FFFFFF; FONT-WEIGHT: normal; COLOR: #333333; TEXT-DECORATION:none}
+
+
+
+.breadCrumbText		    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #88909B; TEXT-DECORATION: none}
+
+.breadCrumb A		    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #88909B; TEXT-DECORATION: underline}
+.breadCrumb A:HOVER  	{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #88909B; TEXT-DECORATION: underline}
+.breadCrumb A:LINK    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #88909B; TEXT-DECORATION: underline}
+.breadCrumb A:ACTIVE    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #88909B; TEXT-DECORATION: underline}
+.breadCrumb A:VISITED {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #88909B; TEXT-DECORATION: underline}
+
+.TitleBarText		    {FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #88909B; TEXT-DECORATION: none}
+.TitleSideBoxText		{FONT-SIZE: 8.6pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #323334; TEXT-DECORATION: none}
+.TitleMainBoxText		{FONT-SIZE: 11pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #323334; TEXT-DECORATION: none}
+.quoteSideBoxWhite		{FONT-SIZE: 7.5pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none}
+.quoteSideBoxGreen		{FONT-SIZE: 8pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #0b3b19; TEXT-DECORATION: none}
+.SideBoxText			{FONT-SIZE: 8pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #3D3B3C; TEXT-DECORATION: none}
+.SideBoxText1			{FONT-SIZE: 9pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #2d4835; TEXT-DECORATION: none}
+
+.eshopTitle {FONT-SIZE: 12pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #697583; TEXT-DECORATION: none}
+
+.TitleMainBodyTextR		{FONT-SIZE: 13pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: bold; COLOR: #942724; TEXT-DECORATION: none}
+.subTitleMainTextR	{FONT-SIZE: 10pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #a14b49; TEXT-DECORATION: none}
+
+.greenTitle		    {FONT-SIZE: 11pt; FONT-FAMILY: verdana,tahoma,arial,helvetica; FONT-WEIGHT: normal; COLOR: #1E6A28; TEXT-DECORATION: none}
+
+.helptitle		{font-family: verdana,tahoma,arial,helvetica;font-size:10pt;color:#336699; FONT-WEIGHT: normal}
+.helptext		{font-family: verdana,tahoma,arial,helvetica;font-size:8pt;color:#333333;line-height: 175%; FONT-WEIGHT: normal}
+
+
+.MainTxt{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px; line-height:17px; color:##221E1F; text-align:justify;}
+	
+.MainTxt A		 	{FONT-SIZE: 13px; FONT-FAMILY: Verdana,Arial, Helvetica, sans-serif; COLOR: ##2a5f98; TEXT-DECORATION: underline;}
+.MainTxt A:HOVER   {FONT-SIZE: 13px; FONT-FAMILY: Verdana,Arial, Helvetica, sans-serif; COLOR: ##2a5f98; TEXT-DECORATION: underline}
+.MainTxt A:LINK    {FONT-SIZE: 13px; FONT-FAMILY: Verdana,Arial, Helvetica, sans-serif; COLOR: ##2a5f98; TEXT-DECORATION: underline;}
+.MainTxt A:ACTIVE   {FONT-SIZE: 13px; FONT-FAMILY: Verdana,Arial, Helvetica, sans-serif; COLOR: ##2a5f98; TEXT-DECORATION: underline}
+.MainTxt A:VISITED    {FONT-SIZE: 13px; FONT-FAMILY: Verdana,Arial, Helvetica, sans-serif; COLOR: ##2a5f98; TEXT-DECORATION: underline;}
+
+.tab_on, a.tab_on, a.tab_on:visited, a.tab_on:active, a.tab_on:hover   {
+	font-family: verdana; 
+	font-size: 10px; 
+	color: #FFF; 
+	font-weight: bold;
+	background-color: #647587; 
+	text-decoration: none; 
+}
+
+.tab_off, a.tab_off, a.tab_off:visited, a.tab_off:active, a.tab_off:hover   {
+	font-family: verdana; 
+	font-size: 10px; 
+	color: #FFF; 
+	font-weight: bold;
+	background-color: #8592A1; 
+	text-decoration: none; 
+}
+
+
+	td.forumgroupodd {
+		FONT-SIZE: 11PX; 
+		FONT-FAMILY: VERDANA, ARIAL; 
+		FONT-WEIGHT: NORMAL; 
+		background-color: #FFFFFF;
+		color: #000000;
+		height: 40px;
+		padding: 4px 5px 4px 5px;
+		border-right: 1px solid #E9F2ED;
+		border-bottom: 1px dotted #AAA;
+	}
+	td.forumgroupeven {
+		FONT-SIZE: 11PX; 
+		FONT-FAMILY: VERDANA, ARIAL; 
+		FONT-WEIGHT: NORMAL; 
+		background-color: #F8F8F3;
+		height: 35px;
+		color: #000000;
+		padding: 4px 5px 4px 5px;
+		border-right: 1px solid #E9F2ED;
+		border-bottom: 1px dotted #AAA;
+	}
+	.forumgrouplabel {
+		color: #2d4835;
+		FONT-SIZE: 12PX; 
+		FONT-FAMILY: VERDANA, ARIAL; 
+		FONT-WEIGHT: bold;
+		padding-bottom: 10px;		
+		
+	}
+	
+	td.forumodd {
+		FONT-SIZE: 11PX; 
+		FONT-FAMILY: VERDANA, ARIAL; 
+		FONT-WEIGHT: NORMAL; 
+		background-color: #FFFFFF;
+		color: #000000;
+		height: 40px;
+		padding: 4px 5px 4px 5px;
+		border-right: 1px solid #F2F2EA;
+		border-bottom: 1px dotted #AAA;
+	}
+	td.forumeven {
+		FONT-SIZE: 11PX; 
+		FONT-FAMILY: VERDANA, ARIAL; 
+		FONT-WEIGHT: NORMAL; 
+		background-color: #F8F8F3;
+		height: 35px;
+		color: #000000;
+		padding: 4px 5px 4px 5px;
+		border-right: 1px solid #F2F2EA;
+		border-bottom: 1px dotted #AAA;
+	}
+	td.forumsubhead {
+		FONT-SIZE: 13PX; 
+		FONT-FAMILY: VERDANA, ARIAL; 
+		FONT-WEIGHT: NORMAL; 
+		background-color: #E6E6D6;
+		height: 35px;
+		color: #000000;
+		padding: 4px 5px 4px 5px;
+		border-right: 1px solid #F2F2EA;
+		border-bottom: 1px dotted #AAA;
+	}
+
+	a.forumrows {
+		text-decoration: underline;
+		font-weight: normal;
+		color: #000;
+		font-size: 11px;	
+	}
+	.forumlabel {
+		color: #828256;
+		FONT-SIZE: 12PX; 
+		FONT-FAMILY: VERDANA, ARIAL; 
+		FONT-WEIGHT: bold;
+		padding-bottom: 10px;		
+		
+	}
+	
+	
+	div.eshoptitle {
+		font-size: 11PX; 
+		font-family: Verdana, Arial; 
+		margin: 0px 0px 8px 5px; 
+		font-weight:bold
+	}
+	div.eshoplinks {
+		font-size: 10px; 
+		font-family: Verdana, Arial; 
+		font-weight: bold; 
+		color: #000; 
+		line-height: 18px;
+		margin: 0px 0px 0px 5px;
+	}
+	.eshoplinks a,
+	.eshoplinks a:hover,
+	.eshoplinks a:visited,
+	.eshoplinks a:active,
+	.eshoplinks a:link {
+		text-decoration: underline;
+		color: #000;
+	}
+	
+	div.eshopimage {
+		float: left;
+		margin-right: 4px;
+	}
+	
+	td.orderItemHdr {
+		background-color: #CDCDCD;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		color: #000; 
+		padding: 4px 2px 4px 2px;
+	}
+	td.orderItem {
+		background-color: #FFF;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #000; 
+		padding: 2px 4px 2px 2px;
+	}
+	td.orderTotals {
+		background-color: #FFF;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #000; 
+		padding: 2px 2px 2px 2px;
+	}
+	td.orderDetailsHdr {
+		background-color: #CDCDCD;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		color: #000; 
+		padding: 4px 2px 4px 2px;
+	}
+	td.orderDetails {
+		background-color: #FFF;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		color: #000; 
+		padding: 4px 2px 4px 2px;
+	}
+	td.orderFormLabel {
+		background-color: #FFF;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #000; 
+	}
+	
+	
+	.contentTitle 	{BACKGROUND-COLOR: #f1f1f1;padding:8px 5px;FONT-FAMILY: Helvetica Neue, helvetica, arial; FONT-SIZE: 13PX; COLOR: #3A3A3A; FONT-WEIGHT: Bold; vertical-align:middle;border-color:#d8d8d8;border-style:solid;border-width:1px;}
+	.contentTitleLeft 	{BACKGROUND-COLOR: #f1f1f1;padding:8px 5px;FONT-FAMILY: Helvetica Neue, helvetica, arial; FONT-SIZE: 13PX; COLOR: #3A3A3A; FONT-WEIGHT: Bold; vertical-align:middle;border-color:#d8d8d8;border-style:solid;border-width:1px; border-right-width:0px;}
+	.contentTitleRight 	{BACKGROUND-COLOR: #f1f1f1;padding:8px 5px;FONT-FAMILY: Helvetica Neue, helvetica, arial; FONT-SIZE: 13PX; COLOR: #3A3A3A; FONT-WEIGHT: Bold; vertical-align:middle;border-color:#d8d8d8;border-style:solid;border-width:1px; border-left-width:0px;}
+
+	
+
+
+	.searchBar   {
+	BACKGROUND-COLOR: #f1f1f1;padding:8px 8px;FONT-FAMILY: Helvetica Neue, helvetica, arial; FONT-SIZE: 13PX; COLOR: #3A3A3A; FONT-WEIGHT:Bold; vertical-align:middle;border-color:#d8d8d8;border-style:solid;border-width:1px;
+	}
+	.searchMenuLink A {FONT-FAMILY: Helvetica Neue, helvetica, arial; FONT-SIZE: 15PX; COLOR: #3A3A3A; FONT-WEIGHT:bold; text-align:center; padding:7px 15px 10px 15px;TEXT-DECORATION:none;}
+	.searchMenuLink A:HOVER {BACKGROUND-COLOR:#FAFAFA;padding:7px 15px 8px 15px;}
+	.searchMenuLinkOn A {FONT-FAMILY: Helvetica Neue, helvetica, arial; FONT-SIZE: 15PX; COLOR: #3A3A3A; FONT-WEIGHT:bold; text-align:center; padding:10px 15px 11px 15px;TEXT-DECORATION:none;BACKGROUND-COLOR:#FAFAFA;border-color:#d8d8d8;border-style:solid;border-width:1px; border-bottom-width:0;}

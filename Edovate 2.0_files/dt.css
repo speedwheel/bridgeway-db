@@ -1,0 +1,73 @@
+.dataTables_wrapper th, .dataTables_wrapper td, .dataTables_length, .dataTables_Filter, .dataTables_info, .legend {
+    font-size: 0.75rem;
+}
+.dataTables_Filter{
+    float: left!important;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+}
+.dataTables_length {
+    float: right!important;
+    padding-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+.kazeli-style thead tr:first-child {
+    background: #942724;
+    color: #fff;
+}
+.kazeli-style thead tr:first-child th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.kazeli-style thead tr:nth-child(2) {
+    background: #f1f1f1;
+}
+.kazeli-style thead tr:nth-child(2) th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: normal;
+}
+.kazeli-style thead tr:nth-child(2) th:nth-child(3) {
+    font-weight: bold;
+}
+.kazeli-style {
+    padding-top: 0.5rem;
+}
+.kazeli-style tbody tr {
+    cursor: pointer;
+}
+.kazeli-style tbody tr:hover {
+    background: #EFDFDF!important;
+}
+.legend {
+    padding-top: 0.5rem;
+    border-top: 3px solid #942724;
+}
+.open-enrollments {
+    padding-right: 2rem;
+    color: #0d6efd!important;
+}
+.enroll-year {
+    margin-left: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 5px;
+}
+.open-enrollments::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0px 3px 0px 5px;
+  }
+.dataTables_wrapper {
+    padding-top: 1rem;
+}
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.overflow-hidden {
+overflow: hidden !important;
+}
+.w-100 {
+    width: 100%;
+}

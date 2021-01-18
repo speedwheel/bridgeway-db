@@ -1,0 +1,688 @@
+/*
+Last modified Thu, 29 Jul 1996
+to display ' " prefix with \
+\b = backspace
+\f = form feed
+isNaN(a) returns true if a is not numeric
+*/
+
+// Global variable
+var defaultEmptyOK = false;
+var ns = (document.layers)? true:false;
+var ie = (document.all)? true:false;
+var whitespace     = "\t\n\r ";   // horizontal tab,newline,carriage return,space etc
+var decimalPointDelimiter = ".";
+
+
+//Check Only JPG and GIF Image is allowed to upload 
+// isImageFile ( STRING photo [, BOOLEAN emptyOK] )
+function isImageFile (photo)
+  {
+   photo = allTrim(photo);
+   if ( !isEmpty(photo) )
+      {
+       var ext = getExtension(photo);
+       return ( ext.toLowerCase() == "jpg" || ext.toLowerCase() == "gif" )
+      }
+   else
+      {
+       if (isImageFile.arguments.length == 1)
+          { return true; }
+       else
+          { return (isImageFile.arguments[1] == true); }
+      }
+  }
+
+
+function isPDFFile (file)
+  {
+   file = allTrim(file);
+   if ( !isEmpty(file) )
+      {
+       var ext = getExtension(file);
+       return ( ext.toLowerCase() == "pdf" )
+      }
+   else
+      { return true; }
+  }
+  
+function isTxtFile (file)
+  {
+   file = allTrim(file);
+   if ( !isEmpty(file) )
+      {
+       var ext = getExtension(file);
+       return ( ext.toLowerCase() == "txt" )
+      }
+   else
+      { return true; }
+  }  
+  
+  function isMidiFile (file)
+  {
+   file = allTrim(file);
+   if ( !isEmpty(file) )
+      {
+       var ext = getExtension(file);
+       return ( ext.toLowerCase() == "mid" )
+      }
+   else
+      { return true; }
+  } 
+
+  
+function isEmpty ( strIn )
+  {
+   strIn = allTrim(strIn);
+   return ( (strIn==null) || (strIn.length==0) );
+  }
+
+
+// allTrim ( STRING strIn [, INTEGER maxLength] )
+// allTrim ( " abc" ) returns "abc"
+// allTrim ( " abc", 2 ) returns "ab"
+function allTrim ( strIn )
+  {
+   // trim leading spaces
+   var i = 0;
+   while ( i <= strIn.length-1 && whitespace.indexOf(strIn.charAt(i)) != -1 )
+     { i++; }
+   if ( i == strIn.length )
+      { strIn = ""; }
+   else
+      { strIn = strIn.substring ( i, strIn.length); }
+ 
+   // trim trailing spaces
+   i = strIn.length-1;
+   while ( i >= 0 && whitespace.indexOf(strIn.charAt(i)) != -1 )
+     { i--; }
+   strIn = strIn.substring ( 0, i+1);
+
+   // check length
+   if ( allTrim.arguments.length >= 2 )
+      {
+       var maxLength = allTrim.arguments[1];
+       if ( strIn.length > maxLength )
+          {
+           alert ( "This field exceeds maximum length allowed (" + maxLength + ")!" );
+           return strIn.substring(0,maxLength);
+          }
+       else
+          { return strIn; }
+      }
+   else
+      { return strIn; }
+  }
+
+
+function getExtension ( filename )
+  {
+   filename = allTrim(filename);
+   var dotAt = filename.lastIndexOf(".");
+   if ( dotAt != -1 )
+      { return filename.substring(dotAt+1,filename.length); }
+   else
+      { return ""; }
+  }
+
+
+// get Filename without path/directory
+function getFname(filename)
+  {
+   filename = allTrim(filename);
+   var dotAt = filename.lastIndexOf("\\");
+   if ( dotAt != -1 )
+      { return filename.substring(dotAt+1,filename.length); }
+   else
+      { return ""; }
+  }
+
+
+// replace single quote with double quote
+function repQuote(checkString)
+  {
+   var ch        = "";
+   var count     = 0;
+   var newString = ""
+
+   if ( checkString.indexOf("'") != -1 )
+      {
+       for ( var i = 0; i < checkString.length; i++)
+           {
+            ch = checkString.substring(i, i+1);
+            if (ch == "'")
+               {
+                while (ch == "'")
+                  {
+                   i++;
+                   ch = checkString.substring(i, i+1);
+                  }
+                newString += "''";
+
+                if (ch >= " " && ch <= "~")
+                   { newString += ch; }
+               }
+            else
+               {
+                if (ch >= " " && ch <= "~")
+                   { newString += ch; }
+               }
+           }
+       return newString;
+      }
+   else
+      { return checkString; }
+  }
+
+
+// trimAllFields ( [INTEGER textAreaLength] )
+function trimAllFields()
+  {
+   for ( var formNo=0; formNo<document.forms.length; ++formNo )
+       {
+        for ( var i=0; i<document.forms[formNo].elements.length; i++)
+            {
+             if ( document.forms[formNo].elements[i].type == "text" ||
+                  document.forms[formNo].elements[i].type == "password" ||
+                  document.forms[formNo].elements[i].type == "textarea" ||
+                  document.forms[formNo].elements[i].type == "hidden" )
+                {
+                  document.forms[formNo].elements[i].value = allTrim(document.forms[formNo].elements[i].value);
+                  if ( trimAllFields.arguments.length == 1 &&
+                       document.forms[formNo].elements[i].type == "textarea" )
+                     {
+                       var fieldLength = trimAllFields.arguments[0];
+                       document.forms[formNo].elements[i].value = document.forms[formNo].elements[i].value.substring(0,fieldLength);
+                     }
+                }
+            }
+       }
+  }
+
+
+// isEmail ( STRING s [, BOOLEAN emptyOK] )
+// 
+// Email address must be of form a@b.c -- in other words:
+// * there must be at least one character before the @
+// * there must be at least one character before and after the .
+// * the characters @ and . are both required
+function isEmail (s)
+  {
+   s = allTrim(s);
+   if ( isEmpty(s) )
+      {
+       if (isEmail.arguments.length == 1)
+          { return defaultEmptyOK; }
+       else
+          { return (isEmail.arguments[1] == true); }
+      }
+
+   // there must be >= 1 character before @, so we
+   // start looking at character position 1 
+   // (i.e. second character)
+   var i = 1;
+   var a = 1;
+   var countAT = 0;
+   var sLength = s.length;
+   
+   while ( a < sLength)
+     { 
+	     if	(s.charAt(a) == "@")
+	     {
+	     	countAT++;
+	     }
+	     a++; 
+     }
+
+   if(countAT!=1)
+  	 {return false;}
+	
+   // look for @
+   while ( i < sLength && s.charAt(i) != "@" )
+     { i++; }
+
+   if ( i >= sLength || s.charAt(i) != "@" )
+      { return false; }
+   else
+      { i += 2; }
+
+   // look for .
+   while ( i < sLength && s.charAt(i) != "." )
+     { i++; }
+
+   // there must be at least one character after the .
+   if ( i >= sLength - 1 || s.charAt(i) != "." )
+      { return false; }
+   else if ( s.indexOf(",") >= 0 )
+      { return false; }
+
+   var validEMChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@";
+   return true;
+  }
+
+
+// checkObjLength ( OBJECT elemValue, INTEGER maxLength)
+function checkObjLength ( elem, maxLength )
+  {
+   var strIn = allTrim(elem.value);
+   if ( strIn.length > maxLength )
+      {
+       //alert ( "This field exceeds maximum length allowed (" + maxLength + ")!" );
+       elem.focus(); return false;
+      }
+   else
+      { elem.value = strIn; return true; }
+  }
+
+
+// checkObjInteger ( OBJECT elemValue[, BOOLEAN emptyOK] )
+function checkObjInteger ( elem )
+  {
+   if (checkObjInteger.arguments.length == 2)
+      { var blnEmptyOK = (checkObjInteger.arguments[1]==true); }
+   else
+      { var blnEmptyOK = defaultEmptyOK; }
+
+   s = allTrim(elem.value);
+   if ( isEmpty(s) )
+      {
+       if ( !blnEmptyOK ) { elem.focus(); }
+       return blnEmptyOK;
+      }
+
+   s = ltrimZeros(s);
+   if ( !isInteger(s) )
+      { elem.focus(); elem.select(); return false; }
+   else if ( !blnEmptyOK && ( parseInt(s)==0 || parseFloat(s)==0 ) )
+           { elem.focus(); elem.select(); return false; }
+
+   elem.value = s;
+   return true;
+  }
+
+
+// checkObjValue ( OBJECT elemValue, FLOAT maxValue[, BOOLEAN emptyOK] )
+function checkObjValue ( elem, maxValue )
+  {
+   if (checkObjValue.arguments.length == 3)
+      { var blnEmptyOK = (checkObjValue.arguments[2] == true); }
+   else
+      { var blnEmptyOK = defaultEmptyOK; }
+
+   s = allTrim(elem.value);
+   if ( isEmpty(s) )
+      {
+       if ( !blnEmptyOK ) { elem.focus(); }
+       return blnEmptyOK 
+      }
+
+   s = ltrimZeros(s);
+   if ( !isFloat(s) && !isInteger(s) )
+      { elem.select(); elem.focus(); return false; }
+   else
+
+   if ( !blnEmptyOK && ( parseInt(s)==0 || parseFloat(s)==0 ) )
+      { elem.select(); elem.focus(); return false; }
+   else if ( parseFloat(s) > maxValue )
+           {
+            //alert ( "Field exceeds maximum value allowed (" + maxValue + ")!" );
+            elem.select(); elem.focus(); return false;
+           }
+ 
+   elem.value = s;
+   return true;
+  }
+
+
+// Remove trailing 0, parseInt sometimes returns 0 for 09
+function ltrimZeros ( s )
+  {
+   s = allTrim(s);
+   var i = 0;
+   while ( i <= s.length-1 && s.charAt (i) == "0" )
+     { i++; }
+   if ( i == s.length )
+      { s = "0"; }
+   else
+      { s = s.substring ( i, s.length); }
+
+   return s;
+  }
+
+
+// Append specific character to a string until we fulfill the length
+function appendLeft ( strIn, charIn, lengthIn )
+  {
+   var currLength = strIn.length;
+   var newStr     = "" + strIn;
+   for ( var i=currLength; i<lengthIn; i++ )
+       { newStr = charIn + newStr; }
+   return newStr;
+  }
+
+
+// isIntegerInRange ( STRING s, INTEGER a, INTEGER b [, BOOLEAN emptyOK] )
+// isIntegerInRange returns true if string s is an integer 
+// within the range of integer arguments a and b, inclusive.
+function isIntegerInRange (s, a, b)
+  {
+   s = allTrim(s);
+   if ( isEmpty(s) )
+      {
+       if ( isIntegerInRange.arguments.length == 1 )
+          { return defaultEmptyOK; }
+       else
+          { return (isIntegerInRange.arguments[1] == true); }
+      }
+
+   // Catch non-integer strings to avoid creating a NaN below, which isn't available on JavaScript 1.0 for Windows.
+   s = ltrimZeros(s);
+   if (!isInteger(s, false)) return false;
+
+   // Now, explicitly change the type to integer via parseInt
+   // so that the comparison code below will work both on 
+   // JavaScript 1.2 (which typechecks in equality comparisons)
+   // and JavaScript 1.1 and before (which doesn't).
+   var num = parseInt (s);
+   return ((num >= a) && (num <= b));
+  }
+
+
+// Returns true if character c is an English letter (A .. Z, a..z).
+function isLetter (c)
+  { return ( ( c >= "a" && c <= "z" ) || ( c >= "A" && c <= "Z" ) ); }
+
+
+// Returns true if character c is a digit 
+function isDigit (c)
+  { return ( c >= "0" && c <= "9"); }
+
+
+// Returns true if character c is a letter or digit.
+function isLetterOrDigit (c)
+  { return ( isLetter(c) || isDigit(c) ); }
+
+
+// isInteger (STRING s [, BOOLEAN emptyOK])
+// isInteger (s [,eok])   all characters in string s are numbers.
+// Returns true if all characters in string s are numbers.
+// Accepts non-signed integers only. Does not accept floating point, exponential notation, etc.
+// We don't use parseInt because that would accept a string
+// with trailing non-numeric characters.
+// By default, returns defaultEmptyOK if s is empty.
+// There is an optional second argument called emptyOK.
+//    emptyOK is used to override for a single function call
+//           the default behavior which is specified globally by defaultEmptyOK.
+// If emptyOK is false (or any value other than true), 
+//      the function will return false if s is empty.
+// If emptyOK is true, the function will return true if s is empty.
+//
+// EXAMPLE FUNCTION CALL:     RESULT:
+// isInteger ("5")            true 
+// isInteger ("")             defaultEmptyOK
+// isInteger ("-5")           false
+// isInteger ("", true)       true
+// isInteger ("", false)      false
+// isInteger ("5", false)     true
+function isInteger (s)
+  {
+   s = allTrim(s);
+   if ( isEmpty(s) )
+      {
+       if (isInteger.arguments.length == 1) { return defaultEmptyOK; }
+       else { return (isInteger.arguments[1] == true); }
+      }
+
+    // Search through string's characters one by one until we find a non-numeric character.
+    s = ltrimZeros(s);
+    for ( var i = 0; i < s.length; i++)
+    {   
+        var c = s.charAt(i);
+        if (!isDigit(c)) return false;
+    }
+    return true;
+  }
+
+
+// isSignedInteger (STRING s [, BOOLEAN emptyOK])
+// isSignedInteger (s [,eok])          True if all characters in string s are numbers; leading + or - allowed.
+// Returns true if all characters are numbers; first character is allowed to be + or - as well.
+// Does not accept floating point, exponential notation, etc.
+// We don't use parseInt because that would accept a string with trailing non-numeric characters.
+//
+// EXAMPLE FUNCTION CALL:          RESULT:
+// isSignedInteger ("5")           true 
+// isSignedInteger ("")            defaultEmptyOK
+// isSignedInteger ("-5")          true
+// isSignedInteger ("+5")          true
+// isSignedInteger ("", false)     false
+// isSignedInteger ("", true)      true
+function isSignedInteger (s)
+  {
+    s = allTrim(s);
+    if ( isEmpty(s) )
+       {
+        if (isSignedInteger.arguments.length == 1) { return defaultEmptyOK; }
+        else { return (isSignedInteger.arguments[1] == true); }
+       }
+
+    var startPos = 0;
+    var secondArg = defaultEmptyOK;
+    if (isSignedInteger.arguments.length > 1)
+       { secondArg = isSignedInteger.arguments[1]; }
+
+    // skip leading + or -
+    if ( (s.charAt(0) == "-") || (s.charAt(0) == "+") )
+       { startPos = 1; }
+    //return ( isInteger( s.substring(startPos,s.length),secondArg) );
+
+    s = s.substring(startPos, s.length)
+    s = ltrimZeros(s);
+    return ( isInteger(s,secondArg) );
+  }
+
+
+// isPositiveInteger (STRING s [, BOOLEAN emptyOK])
+// isPositiveInteger (s [,eok])        True if string s is an integer > 0.
+// Returns true if string s is an integer > 0.
+function isPositiveInteger (s)
+  {
+   s = allTrim(s);
+   var secondArg = defaultEmptyOK;
+   if (isPositiveInteger.arguments.length > 1)
+       { secondArg = isPositiveInteger.arguments[1]; }
+    if ( isEmpty(s) ) { return secondArg };
+
+    // The next line is a bit byzantine.  What it means is:
+    // a) s must be a signed integer, AND
+    // b) one of the following must be true:
+    //    i)  s is empty and we are supposed to return true for
+    //        empty strings
+    //    ii) this is a positive, not negative, number
+    //return ( isSignedInteger(s,secondArg) &&
+    //         ( ( isEmpty(s) && secondArg )  || ( parseInt(s)>0 ) ) );
+    s = ltrimZeros (s);
+    return ( isSignedInteger(s,secondArg) && parseInt(s)>0 );
+  }
+
+
+// isNonnegativeInteger (STRING s [, BOOLEAN emptyOK])
+// isNonnegativeInteger (s [,eok])     True if string s is an integer >= 0.
+// Returns true if string s is an integer >= 0.
+function isNonnegativeInteger (s)
+  {
+   s = allTrim(s);
+   var secondArg = defaultEmptyOK;
+   if (isNonnegativeInteger.arguments.length > 1)
+      { secondArg = isNonnegativeInteger.arguments[1]; }
+   if ( isEmpty(s) ) { return secondArg };
+
+    // The next line is a bit byzantine.  What it means is:
+    // a) s must be a signed integer, AND
+    // b) one of the following must be true:
+    //    i)  s is empty and we are supposed to return true for
+    //        empty strings
+    //    ii) this is a number >= 0
+    //return ( isSignedInteger(s,secondArg) &&
+    //         ( (isEmpty(s) && secondArg)  || (parseInt (s) >= 0) ) );
+    s = ltrimZeros(s);
+    return ( isSignedInteger(s,secondArg) && parseInt(s)>= 0 );
+  }
+
+
+// isNegativeInteger (STRING s [, BOOLEAN emptyOK])
+// isNegativeInteger (s [,eok])        True if s is an integer < 0.
+// 
+// Returns true if string s is an integer < 0.
+function isNegativeInteger (s)
+  {
+   s = allTrim(s);
+   var secondArg = defaultEmptyOK;
+   if (isNegativeInteger.arguments.length > 1)
+      { secondArg = isNegativeInteger.arguments[1]; }
+   if ( isEmpty(s) ) { return secondArg };
+
+    // The next line is a bit byzantine.  What it means is:
+    // a) s must be a signed integer, AND
+    // b) one of the following must be true:
+    //    i)  s is empty and we are supposed to return true for
+    //        empty strings
+    //    ii) this is a negative, not positive, number
+    //return ( isSignedInteger(s, secondArg) &&
+    //         ( (isEmpty(s) && secondArg)  || (parseInt (s) < 0) ) );
+    s = ltrimZeros(s);
+    return ( isSignedInteger(s,secondArg) && parseInt(s)<0 );
+  }
+
+
+// isNonpositiveInteger (STRING s [, BOOLEAN emptyOK])
+// isNonpositiveInteger (s [,eok])     True if s is an integer <= 0.
+// 
+// Returns true if string s is an integer <= 0.
+function isNonpositiveInteger (s)
+  {
+   s = allTrim(s);
+   var secondArg = defaultEmptyOK;
+   if (isNonpositiveInteger.arguments.length > 1)
+      { secondArg = isNonpositiveInteger.arguments[1]; }
+   if ( isEmpty(s) ) { return secondArg };
+
+    // The next line is a bit byzantine.  What it means is:
+    // a) s must be a signed integer, AND
+    // b) one of the following must be true:
+    //    i)  s is empty and we are supposed to return true for
+    //        empty strings
+    //    ii) this is a number <= 0
+    //return ( isSignedInteger(s,secondArg) &&
+    //        ( (isEmpty(s) && secondArg)  || (parseInt (s) <= 0) ) );
+    s = ltrimZeros(s);
+    return ( isSignedInteger(s,secondArg) && parseInt(s) <= 0 );
+  }
+
+
+// isFloat (STRING s [, BOOLEAN emptyOK])
+// isFloat (s [,eok])                  True if string s is an unsigned floating point (real) number. (Integers also OK.)
+// True if string s is an unsigned floating point (real) number. 
+// Also returns true for unsigned integers. If you wish
+//      to distinguish between integers and floating point numbers,
+//      first call isInteger, then call isFloat.
+// Does not accept exponential notation.
+function isFloat (s)
+  {
+   s = allTrim(s);
+   if ( isEmpty(s) )
+      {
+       if (isFloat.arguments.length == 1) { return defaultEmptyOK; }
+       else { return (isFloat.arguments[1] == true); }
+      }
+
+   s = ltrimZeros(s);
+   var seenDecimalPoint = false;
+   if (s == decimalPointDelimiter) return false;
+
+   // Search through string's characters one by one until we find a non-numeric character.
+   for ( var i = 0; i < s.length; i++)
+       {   
+        var c = s.charAt(i);
+        if ((c == decimalPointDelimiter) && !seenDecimalPoint) seenDecimalPoint = true;
+        else if (!isDigit(c)) return false;
+       }
+   return true;
+  }
+
+
+// isSignedFloat (STRING s [, BOOLEAN emptyOK])
+// isSignedFloat (s [,eok]) True if string s is a floating point number; leading + or - allowed. (Integers also OK.)
+// True if string s is a signed or unsigned floating point (real) number. First character is allowed to be + or -.
+// Also returns true for unsigned integers. If you wish
+//      to distinguish between integers and floating point numbers,
+//      first call isSignedInteger, then call isSignedFloat.
+// Does not accept exponential notation.
+function isSignedFloat (s)
+  {
+   s = allTrim(s);
+   if ( isEmpty(s) )
+      {
+       if (isSignedFloat.arguments.length == 1) { return defaultEmptyOK; }
+       else { return (isSignedFloat.arguments[1] == true); }
+      }
+
+   var startPos = 0;
+   var secondArg = defaultEmptyOK;
+   if ( isSignedFloat.arguments.length > 1 )
+      { secondArg = isSignedFloat.arguments[1]; }
+
+    // skip leading + or -
+    if ( (s.charAt(0) == "-") || (s.charAt(0) == "+") )
+       { startPos = 1; }
+    //return (isFloat(s.substring(startPos, s.length), secondArg));
+
+    s = s.substring(startPos, s.length)
+    s = ltrimZeros(s);
+    return (isFloat(s,secondArg));
+  }
+
+
+// isAlphabetic (STRING s [, BOOLEAN emptyOK])
+// isAlphabetic (s [,eok]) True if string s is English letters 
+// Returns true if string s is English letters (A .. Z, a..z) only.
+function isAlphabetic (s)
+  {
+   s = allTrim(s);
+   if ( isEmpty(s) )
+      {
+       if (isAlphabetic.arguments.length == 1) { return defaultEmptyOK; }
+       else { return (isAlphabetic.arguments[1] == true); }
+      }
+
+    // Search through string's characters one by one until we find a non-alphabetic character.
+    for ( var i = 0; i < s.length; i++)
+        {
+         var c = s.charAt(i);
+         if (!isLetter(c)) { return false; }
+        }
+    return true;
+  }
+
+
+// isAlphanumeric (STRING s [, BOOLEAN emptyOK])
+// isAlphanumeric (s [,eok]) True if string s is English letters and numbers only.
+// Returns true if string s is English letters (A .. Z, a..z) and numbers only.
+function isAlphanumeric (s)
+  {
+   s = allTrim(s);
+   if ( isEmpty(s) )
+      {
+       if (isAlphanumeric.arguments.length == 1) { return defaultEmptyOK; }
+       else { return (isAlphanumeric.arguments[1] == true); }
+      }
+
+    // Search through string's characters one by one until we find a non-alphanumeric character.
+    for ( var i = 0; i < s.length; i++)
+        {   
+         var c = s.charAt(i);
+         if (! (isLetter(c) || isDigit(c) ) ) { return false; }
+        }
+    return true;
+  }
+  
