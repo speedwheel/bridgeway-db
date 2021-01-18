@@ -329,7 +329,7 @@ var DtModule = (function () {
         'targets': 8,
       },
       {
-        'title': 'Lincense Created',
+        'title': 'License Created',
         'name': 'license_created',
         'data': 'license_created',
         'className': 'dt-body-center',
