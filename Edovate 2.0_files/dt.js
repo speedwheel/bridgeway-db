@@ -399,7 +399,7 @@ var DtModule = (function () {
       table.column( 1 ).search( val ? '^'+val+'$' : '', true, false ).draw();
     })
 
-    $("input").keyup(function(e) {
+    $(document).keyup(function(e) {
       if (e.keyCode == 27) { //Escape button
          $.fancybox.close();
        }
