@@ -558,6 +558,7 @@ var DtModule = (function () {
         'title': 'Course Recommend Date',
         'name': 'course_recommend_date',
         'data': 'course_recommend_date',
+        'className': 'dt-body-center',
         'targets': 8,
       },
       {
@@ -609,7 +610,7 @@ var DtModule = (function () {
     'rowCallback': function( row, data ) {
     },
     'initComplete': function (settings, json) {
-     
+      
     }
   }
 
