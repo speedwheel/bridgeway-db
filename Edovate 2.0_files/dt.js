@@ -16,7 +16,7 @@ var DtModule = (function () {
     orientation_completed: [0, 0, 0],
   }
 
-  var demoContent = {
+  var demoContentOnboardingAdvisors = {
     'data': [
       {
         'advisor_name': 'John Smith',
@@ -259,8 +259,116 @@ var DtModule = (function () {
     ]
   };
 
-  var dtConf = {
-    'data': demoContent.data,
+
+  var demoContentOnboardingStudents = {
+    'data': [
+      {
+        'student_name': 'Alyssa Hill',
+        'enrolled': '8/15/2019',
+        'order_date': '8/15/2019',
+        'payment_approved_date': '8/15/2019',
+        'advisor_assigned_date': '8/15/2019',
+        'first_contect_date': '8/15/2019',
+        'perf_series_completed': '8/15/2019',
+        'lsa_completed_date': '8/15/2019',
+        'course_recommend_date': '8/15/2019',
+        'final_course_approved_date': '8/15/2019',
+        'enrollment_date': '8/15/2019',
+        'ready_to_start_date': '8/15/2019',
+        'license_created_date': '8/15/2019',
+        'curriculum_shipment': '8/15/2019',
+        'orientation_complete': '8/15/2019',
+      },
+      {
+        'student_name': 'Jarred Davila',
+        'enrolled': '8/15/2019',
+        'order_date': '8/15/2019',
+        'payment_approved_date': '8/15/2019',
+        'advisor_assigned_date': '8/15/2019',
+        'first_contect_date': '8/15/2019',
+        'perf_series_completed': '8/15/2019',
+        'lsa_completed_date': '8/15/2019',
+        'course_recommend_date': '8/15/2019',
+        'final_course_approved_date': '8/15/2019',
+        'enrollment_date': '8/15/2019',
+        'ready_to_start_date': '8/15/2019',
+        'license_created_date': '8/15/2019',
+        'curriculum_shipment': '8/15/2019',
+        'orientation_complete': '8/15/2019',
+      },
+      {
+        'student_name': 'Kris Luna',
+        'enrolled': '8/15/2019',
+        'order_date': '8/15/2019',
+        'payment_approved_date': '8/15/2019',
+        'advisor_assigned_date': '8/15/2019',
+        'first_contect_date': '8/15/2019',
+        'perf_series_completed': '8/15/2019',
+        'lsa_completed_date': '8/15/2019',
+        'course_recommend_date': '8/15/2019',
+        'final_course_approved_date': '8/15/2019',
+        'enrollment_date': '8/15/2019',
+        'ready_to_start_date': '8/15/2019',
+        'license_created_date': '8/15/2019',
+        'curriculum_shipment': '8/15/2019',
+        'orientation_complete': '8/15/2019',
+      },
+      {
+        'student_name': 'Adnaan Stanley',
+        'enrolled': '8/15/2019',
+        'order_date': '8/15/2019',
+        'payment_approved_date': '8/15/2019',
+        'advisor_assigned_date': '8/15/2019',
+        'first_contect_date': '8/15/2019',
+        'perf_series_completed': '8/15/2019',
+        'lsa_completed_date': '8/15/2019',
+        'course_recommend_date': '8/15/2019',
+        'final_course_approved_date': '8/15/2019',
+        'enrollment_date': '8/15/2019',
+        'ready_to_start_date': '8/15/2019',
+        'license_created_date': '8/15/2019',
+        'curriculum_shipment': '8/15/2019',
+        'orientation_complete': '8/15/2019',
+      },
+      {
+        'student_name': 'Cassius Guzman',
+        'enrolled': '8/15/2019',
+        'order_date': '8/15/2019',
+        'payment_approved_date': '8/15/2019',
+        'advisor_assigned_date': '8/15/2019',
+        'first_contect_date': '8/15/2019',
+        'perf_series_completed': '8/15/2019',
+        'lsa_completed_date': '8/15/2019',
+        'course_recommend_date': '8/15/2019',
+        'final_course_approved_date': '8/15/2019',
+        'enrollment_date': '8/15/2019',
+        'ready_to_start_date': '8/15/2019',
+        'license_created_date': '8/15/2019',
+        'curriculum_shipment': '8/15/2019',
+        'orientation_complete': '8/15/2019',
+      },
+      {
+        'student_name': 'Suranne Mccullough',
+        'enrolled': '8/15/2019',
+        'order_date': '8/15/2019',
+        'payment_approved_date': '8/15/2019',
+        'advisor_assigned_date': '8/15/2019',
+        'first_contect_date': '8/15/2019',
+        'perf_series_completed': '8/15/2019',
+        'lsa_completed_date': '8/15/2019',
+        'course_recommend_date': '8/15/2019',
+        'final_course_approved_date': '8/15/2019',
+        'enrollment_date': '8/15/2019',
+        'ready_to_start_date': '8/15/2019',
+        'license_created_date': '8/15/2019',
+        'curriculum_shipment': '8/15/2019',
+        'orientation_complete': '8/15/2019',
+      },
+    ]
+  };
+
+  var dtConfOnboardingAdvisors = {
+    'data': demoContentOnboardingAdvisors.data,
     'dom': 'l<"toolbar">frtip',
     'responsive': true,
     'columnDefs': [
@@ -386,12 +494,131 @@ var DtModule = (function () {
     }
   }
 
+  var dtConfOnboaardingStudents = {
+    'data': demoContentOnboardingStudents.data,
+    'dom': 'l<"toolbar">frtip',
+    'responsive': true,
+    'columnDefs': [
+      {
+        'title': 'Student Name',
+        'name': 'student_name',
+        'data': 'student_name',
+        'targets': 0,
+      },
+      {
+        'title': 'Enrolled',
+        'name': 'enrolled',
+        'data': 'enrolled',
+        'className': 'dt-body-center',
+        'targets': 1,
+      },
+      {
+        'title': 'Order Date',
+        'name': 'order_date',
+        'data': 'order_date',
+        'className': 'dt-body-center',
+        'targets': 2,
+      },
+      {
+        'title': 'Payment approved date',
+        'name': 'payment_approved_date',
+        'data': 'payment_approved_date',
+        'className': 'dt-body-center',
+        'targets': 3,
+      },
+      {
+        'title': 'Advisor Assigned Date',
+        'name': 'advisor_assigned_date',
+        'data': 'advisor_assigned_date',
+        'className': 'dt-body-center',
+        'targets': 4,
+      },
+      {
+        'title': 'First Contact Date',
+        'name': 'first_contect_date',
+        'data': 'first_contect_date',
+        'className': 'dt-body-center',
+        'targets': 5,
+      },
+      {
+        'title': 'Perf. Series Completed',
+        'name': 'perf_series_completed',
+        'data': 'perf_series_completed',
+        'className': 'dt-body-center',
+        'targets': 6,
+      },
+      {
+        'title': 'LSA Completed Date',
+        'name': 'lsa_completed_date',
+        'data': 'lsa_completed_date',
+        'className': 'dt-body-center',
+        'targets': 7,
+      },
+      {
+        'title': 'Course Recommend Date',
+        'name': 'course_recommend_date',
+        'data': 'course_recommend_date',
+        'targets': 8,
+      },
+      {
+        'title': 'Final Course Approved Date',
+        'name': 'final_course_approved_date',
+        'data': 'final_course_approved_date',
+        'className': 'dt-body-center',
+        'targets': 9,
+      },
+      {
+        'title': 'Enrollment Date',
+        'name': 'enrollment_date',
+        'data': 'enrollment_date',
+        'className': 'dt-body-center',
+        'targets': 10,
+      },
+      {
+        'title': 'Ready to Start Date',
+        'name': 'ready_to_start_date',
+        'data': 'ready_to_start_date',
+        'className': 'dt-body-center',
+        'targets': 11,
+      },
+      {
+        'title': 'License Created Date',
+        'name': 'license_created_date',
+        'data': 'license_created_date',
+        'className': 'dt-body-center',
+        'targets': 12,
+      },
+      {
+        'title': 'Curriculum Shipment',
+        'name': 'curriculum_shipment',
+        'data': 'curriculum_shipment',
+        'className': 'dt-body-center',
+        'targets': 13,
+      },
+      {
+        'title': 'Orientation Complete',
+        'name': 'orientation_complete',
+        'data': 'orientation_complete',
+        'className': 'dt-body-center',
+        'targets': 14,
+      },
+    ],
+    "createdRow": function( row, data, dataIndex){
+      
+    },
+    'rowCallback': function( row, data ) {
+    },
+    'initComplete': function (settings, json) {
+     
+    }
+  }
+
   function cacheDom() {
     DOM.$dt = $('#advisors-table');
   }
 
   function initDT() {
-    var table = DOM.$dt.DataTable(dtConf);
+    var table = DOM.$dt.DataTable(dtConfOnboardingAdvisors);
 
     var firstHeaderRow = $('tr', table.table().header() );
     calcHeaderTotals(table, firstHeaderRow);
@@ -417,11 +644,10 @@ var DtModule = (function () {
       e.preventDefault();
       $.fancybox.open('<table id="student-table" class="cell-border compact stripe dt-body-center kazeli-style"></table>');
       DOM.$st = $('#student-table');
-      var table2 = DOM.$st.DataTable(dtConf);
-      var firstStudetHeaderRow = $('tr', table2.table().header() );
-      calcHeaderTotals(table2, firstStudetHeaderRow);
+      var table2 = DOM.$st.DataTable(dtConfOnboaardingStudents);
+
       table2.on( 'search.dt', function () {
-        calcHeaderTotals(table2, firstStudetHeaderRow);
+        
       });  
     })
   }
